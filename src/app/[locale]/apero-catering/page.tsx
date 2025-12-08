@@ -1,13 +1,22 @@
 import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import CateringForm from '@/components/forms/CateringForm';
 import { Check } from 'lucide-react';
 
-export const metadata = {
-  title: 'Apéro Catering | salottino',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isGerman = locale === 'de';
+  
+  return {
+    title: isGerman ? 'Apéro-Catering | Salottino' : 'Catering Aperitivo | Salottino',
+    description: isGerman
+      ? 'Italienisches Apéro-Catering für Ihren Event. Fingerfood, Prosecco & Wein. Bei Ihnen vor Ort oder im Salottino. Für Firmenfeiern, Geburtstage und mehr.'
+      : 'Catering aperitivo italiano per il vostro evento. Finger food, prosecco e vino. Da voi in loco o al Salottino. Per feste aziendali, compleanni e altro.',
+  };
+}
 
 export default async function CateringPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

@@ -1,11 +1,20 @@
 import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Star, Users } from 'lucide-react';
 
-export const metadata = {
-  title: 'Über uns | salottino',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isGerman = locale === 'de';
+  
+  return {
+    title: isGerman ? 'Über uns | Salottino' : 'Chi siamo | Salottino',
+    description: isGerman
+      ? 'Eva Vogel-Degli Esposti, gebürtige Mailänderin, importiert authentische italienische Spezialitäten direkt nach Horgen. Mit Leidenschaft und Sorgfalt ausgewählt.'
+      : 'Eva Vogel-Degli Esposti, milanese di nascita, importa specialità italiane autentiche direttamente a Horgen. Selezionate con passione e cura.',
+  };
+}
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

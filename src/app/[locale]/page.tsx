@@ -34,7 +34,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
           </p>
           
           <h1 className="fade-in-up delay-1 font-display text-5xl md:text-7xl lg:text-8xl font-medium mb-6">
-            salottino
+            Salottino
           </h1>
           
           <p className="fade-in-up delay-2 text-lg md:text-xl text-white/80 max-w-xl mx-auto mb-10 leading-relaxed">
@@ -269,7 +269,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                   <span className="text-xs tracking-[0.15em] uppercase">Adresse</span>
                 </div>
                 <p className="text-white/80 leading-relaxed">
-                  salottino GmbH<br />
+                  Salottino GmbH<br />
                   Seestrasse 159<br />
                   8810 Horgen
                 </p>

@@ -1,6 +1,6 @@
 {
   "Common": {
-    "brandName": "salottino",
+    "brandName": "Salottino",
     "specialties": "Spezialitäten",
     "giftBaskets": "Geschenkkörbe",
     "catering": "Apéro-Catering",
@@ -31,7 +31,7 @@
     "heroSubtitle": "Authentische Spezialitäten, individuelle Geschenkkörbe und Apéro-Catering für besondere Momente.",
     "ctaGifts": "Geschenkkorb anfragen",
     "ctaCatering": "Apéro-Catering anfragen",
-    "aboutTeaserTitle": "Benvenuti im salottino",
+    "aboutTeaserTitle": "Benvenuti im Salottino",
     "aboutTeaserText": "Bei uns finden Sie ausgewählte italienische Köstlichkeiten, die wir direkt und mit viel Sorgfalt importieren. Erleben Sie den Geschmack Italiens – mitten in Horgen.",
     "visitUsTitle": "Besuchen Sie uns",
     "routeBtn": "Route öffnen"
@@ -62,7 +62,7 @@
   "Catering": {
     "title": "Italienisches Apéro-Catering",
     "subtitle": "Holen Sie sich das Dolce Vita an Ihren Event.",
-    "inStore": "Apéro im salottino",
+    "inStore": "Apéro im Salottino",
     "inStoreDesc": "Geniessen Sie unsere Spezialitäten in gemütlicher Atmosphäre direkt bei uns im Laden.",
     "atHome": "Bei Ihnen vor Ort",
     "atHomeDesc": "Wir liefern frisch zubereitete Platten und Getränke zu Ihrer Location in Horgen und Umgebung.",
@@ -93,8 +93,8 @@
   "About": {
     "title": "Über uns",
     "storyTitle": "Herzlich Willkommen",
-    "storyText1": "Im salottino offerieren wir Ihnen sorgfältig ausgesuchte und direkt importierte italienische Spezialitäten mit bestem Qualitätssiegel. Geschätzt werden auch die individuell zusammengestellten Geschenkkörbe für Private oder Geschäftskunden, sowie die von uns organisierten Apéro-Caterings.",
-    "storyText2": "Ich selber bin gebürtige Italienerin, verheiratet mit einem Schweizer und Mutter von zwei Jungs. Ursprünglich habe ich politische Wissenschaften und Public Relations an der Uni Mailand studiert und habe danach viele Jahre für eine italienische Hotelkette als Verkaufsleiterin gearbeitet. Ich freue mich Sie im salottino begrüssen zu dürfen, um Ihnen die Genüsslichkeiten aus meiner Heimat näherzubringen und Sie davon zu überzeugen.",
+    "storyText1": "Im Salottino offerieren wir Ihnen sorgfältig ausgesuchte und direkt importierte italienische Spezialitäten mit bestem Qualitätssiegel. Geschätzt werden auch die individuell zusammengestellten Geschenkkörbe für Private oder Geschäftskunden, sowie die von uns organisierten Apéro-Caterings.",
+    "storyText2": "Ich selber bin gebürtige Italienerin, verheiratet mit einem Schweizer und Mutter von zwei Jungs. Ursprünglich habe ich politische Wissenschaften und Public Relations an der Uni Mailand studiert und habe danach viele Jahre für eine italienische Hotelkette als Verkaufsleiterin gearbeitet. Ich freue mich Sie im Salottino begrüssen zu dürfen, um Ihnen die Genüsslichkeiten aus meiner Heimat näherzubringen und Sie davon zu überzeugen.",
     "signature": "A presto, Eva Vogel-Degli Esposti",
     "valuesTitle": "Unsere Werte",
     "value1Title": "Beste Qualität",
@@ -112,7 +112,7 @@
     "subject": "Betreff"
   },
   "Footer": {
-    "rights": "© 2024 salottino GmbH. Alle Rechte vorbehalten.",
+    "rights": "© 2024 Salottino GmbH. Alle Rechte vorbehalten.",
     "design": "Design & Development"
   },
   "Impressum": {

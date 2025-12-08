@@ -15,24 +15,26 @@
     --popover: 0 0% 100%;
     --popover-foreground: 30 10% 12%;
 
-    --primary: 30 25% 25%;
+    /* Intensivere Farben - mehr Kontrast */
+    --primary: 28 35% 22%;
     --primary-foreground: 30 20% 98%;
 
-    --secondary: 30 15% 94%;
-    --secondary-foreground: 30 25% 25%;
+    --secondary: 30 15% 92%;
+    --secondary-foreground: 28 35% 22%;
 
     --muted: 30 10% 95%;
-    --muted-foreground: 30 10% 45%;
+    --muted-foreground: 30 10% 40%;
 
-    --accent: 20 60% 52%;
+    /* Intensiveres Terracotta */
+    --accent: 18 65% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 90%;
-    --input: 30 15% 90%;
-    --ring: 30 25% 25%;
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 28 35% 22%;
 
     --radius: 0.5rem;
   }
@@ -50,11 +52,13 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'DM Sans', system-ui, sans-serif;
+    line-height: 1.6;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', Georgia, serif;
     @apply font-medium;
+    line-height: 1.2;
   }
 }
 

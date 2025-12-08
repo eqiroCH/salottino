@@ -1,6 +1,6 @@
 {
   "Common": {
-    "brandName": "salottino",
+    "brandName": "Salottino",
     "specialties": "Specialità",
     "giftBaskets": "Cesti Regalo",
     "catering": "Catering Aperitivo",
@@ -31,7 +31,7 @@
     "heroSubtitle": "Specialità autentiche, cesti regalo personalizzati e catering per aperitivi per momenti speciali.",
     "ctaGifts": "Richiedi cesto regalo",
     "ctaCatering": "Richiedi catering",
-    "aboutTeaserTitle": "Benvenuti da salottino",
+    "aboutTeaserTitle": "Benvenuti da Salottino",
     "aboutTeaserText": "Da noi trovate prelibatezze italiane selezionate, importate direttamente e con grande cura. Scoprite il gusto dell'Italia – nel cuore di Horgen.",
     "visitUsTitle": "Venite a trovarci",
     "routeBtn": "Apri percorso"
@@ -62,7 +62,7 @@
   "Catering": {
     "title": "Catering Aperitivo Italiano",
     "subtitle": "Portate la Dolce Vita al vostro evento.",
-    "inStore": "Aperitivo da salottino",
+    "inStore": "Aperitivo da Salottino",
     "inStoreDesc": "Gustate le nostre specialità in un'atmosfera accogliente direttamente nel nostro negozio.",
     "atHome": "Da voi in loco",
     "atHomeDesc": "Consegniamo piatti preparati al momento e bevande alla vostra location a Horgen e dintorni.",
@@ -93,8 +93,8 @@
   "About": {
     "title": "Chi siamo",
     "storyTitle": "Benvenuti",
-    "storyText1": "Al salottino troverete tante specialità italiane di grande qualità. Siamo specializzati nella composizione di cesti personalizzati per tutti i vostri regali privati o aziendali. Abbiamo anche diverse offerte per aperitivi e feste.",
-    "storyText2": "Milanese, sposata con uno svizzero e mamma di due bimbi, ho studiato Scienze Politiche e PR e ho lavorato per anni nel turismo. Non vedo l'ora di darvi il benvenuto nel mio salottino.",
+    "storyText1": "Al Salottino troverete tante specialità italiane di grande qualità. Siamo specializzati nella composizione di cesti personalizzati per tutti i vostri regali privati o aziendali. Abbiamo anche diverse offerte per aperitivi e feste.",
+    "storyText2": "Milanese, sposata con uno svizzero e mamma di due bimbi, ho studiato Scienze Politiche e PR e ho lavorato per anni nel turismo. Non vedo l'ora di darvi il benvenuto nel mio Salottino.",
     "signature": "A presto, Eva Vogel-Degli Esposti",
     "valuesTitle": "I nostri valori",
     "value1Title": "Migliore Qualità",
@@ -112,7 +112,7 @@
     "subject": "Oggetto"
   },
   "Footer": {
-    "rights": "© 2024 salottino GmbH. Tutti i diritti riservati.",
+    "rights": "© 2024 Salottino GmbH. Tutti i diritti riservati.",
     "design": "Design & Sviluppo"
   },
   "Impressum": {

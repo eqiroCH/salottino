@@ -1,10 +1,19 @@
 import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import ContactForm from '@/components/forms/ContactForm';
 
-export const metadata = {
-  title: 'Kontakt | salottino',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isGerman = locale === 'de';
+  
+  return {
+    title: isGerman ? 'Kontakt & Öffnungszeiten | Salottino' : 'Contatto & Orari | Salottino',
+    description: isGerman
+      ? 'Besuchen Sie Salottino in Horgen. Öffnungszeiten: Di-Fr 10-12 & 15-18 Uhr, Sa 10-15 Uhr. Telefon: +41 44 683 20 22. Hauslieferung in Horgen möglich.'
+      : 'Visitate Salottino a Horgen. Orari: Mar-Ven 10-12 & 15-18, Sab 10-15. Telefono: +41 44 683 20 22. Consegna a domicilio a Horgen disponibile.',
+  };
+}
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

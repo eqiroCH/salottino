@@ -1,11 +1,20 @@
 import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import GiftForm from '@/components/forms/GiftForm';
 
-export const metadata = {
-  title: 'Geschenkkörbe | salottino',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isGerman = locale === 'de';
+  
+  return {
+    title: isGerman ? 'Geschenkkörbe | Salottino' : 'Cesti Regalo | Salottino',
+    description: isGerman
+      ? 'Individuelle Geschenkkörbe mit italienischen Spezialitäten für jeden Anlass. Von CHF 30 bis CHF 100+. Perfekt für Kunden, Freunde und Familie.'
+      : 'Cesti regalo personalizzati con specialità italiane per ogni occasione. Da CHF 30 a CHF 100+. Perfetti per clienti, amici e famiglia.',
+  };
+}
 
 export default async function GiftBasketsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

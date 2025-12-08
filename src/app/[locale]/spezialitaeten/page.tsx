@@ -6,13 +6,33 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { products, categories, Category } from '@/content/products';
 
-export const metadata = {
-  title: 'Spezialitäten | salottino',
-};
+import { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const isGerman = locale === 'de';
+  
+  return {
+    title: isGerman ? 'Spezialitäten | Salottino' : 'Specialità | Salottino',
+    description: isGerman
+      ? 'Entdecken Sie unsere italienischen Spezialitäten: Antipasti, Pasta, Weine, Prosecco, Grappa, Dolci und mehr. Direkt importiert aus Italien.'
+      : 'Scoprite le nostre specialità italiane: antipasti, pasta, vini, prosecco, grappa, dolci e altro ancora. Importato direttamente dall\'Italia.',
+    keywords: isGerman
+      ? ['italienische spezialitäten', 'antipasti', 'pasta', 'wein', 'prosecco', 'grappa', 'dolci', 'horgen', 'feinkost']
+      : ['specialità italiane', 'antipasti', 'pasta', 'vino', 'prosecco', 'grappa', 'dolci', 'horgen'],
+    openGraph: {
+      title: isGerman ? 'Spezialitäten | Salottino' : 'Specialità | Salottino',
+      description: isGerman
+        ? 'Italienische Spezialitäten direkt aus Italien'
+        : 'Specialità italiane direttamente dall\'Italia',
+    },
+  };
+}
 
 export default async function SpecialtiesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({locale, namespace: 'Specialties'});
+  const whatsappBase = 'https://wa.me/41793745427';
 
   return (
     <div className="container px-4 pt-28 pb-16 space-y-12">
@@ -64,9 +84,17 @@ export default async function SpecialtiesPage({ params }: { params: Promise<{ lo
                     </CardHeader>
                     <CardFooter>
                       <Button variant="outline" className="w-full" asChild>
-                        <Link href={`/${locale}/kontakt?subject=Anfrage: ${product.name}`}>
-                           {t('ctaAvailability')}
-                        </Link>
+                        <a
+                          href={`${whatsappBase}?text=${encodeURIComponent(
+                            locale === 'de'
+                              ? `Hallo Eva, ich interessiere mich für ${product.name}. Ist es verfügbar?`
+                              : `Ciao Eva, sono interessato a ${product.name}. È disponibile?`
+                          )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {t('ctaAvailability')}
+                        </a>
                       </Button>
                     </CardFooter>
                   </Card>
