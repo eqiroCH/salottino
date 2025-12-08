@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm Background - Creamy White */
+    --background: 35 30% 98%;
+    --foreground: 25 20% 20%;
+
+    /* Card Background - White */
+    --card: 0 0% 100%;
+    --card-foreground: 25 20% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 20% 20%;
+
+    /* Primary: Warm Brown (Espresso/Leather) */
+    --primary: 25 35% 35%;
+    --primary-foreground: 35 30% 98%;
+
+    /* Secondary: Softer Beige/Sand */
+    --secondary: 35 25% 90%;
+    --secondary-foreground: 25 35% 35%;
+
+    /* Muted */
+    --muted: 35 20% 94%;
+    --muted-foreground: 25 10% 50%;
+
+    /* Accent: Turquoise / Teal */
+    --accent: 175 45% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 35 15% 85%;
+    --input: 35 15% 85%;
+    --ring: 25 35% 35%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Mode (Fallback) */
+    --background: 25 20% 12%;
+    --foreground: 35 30% 90%;
+
+    --card: 25 20% 14%;
+    --card-foreground: 35 30% 90%;
+
+    --popover: 25 20% 14%;
+    --popover-foreground: 35 30% 90%;
+
+    --primary: 35 30% 70%;
+    --primary-foreground: 25 20% 12%;
+
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 35 30% 90%;
+
+    --muted: 25 20% 18%;
+    --muted-foreground: 35 10% 65%;
+
+    --accent: 175 45% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 20% 18%;
+    --input: 25 20% 18%;
+    --ring: 35 30% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+}
+

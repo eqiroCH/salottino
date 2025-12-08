@@ -1,0 +1,150 @@
+{
+  "Common": {
+    "brandName": "salottino",
+    "specialties": "Spezialitäten",
+    "giftBaskets": "Geschenkkörbe",
+    "catering": "Apéro-Catering",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "news": "Aktuelles",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "openingHours": "Öffnungszeiten",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "mon": "Montag",
+    "tueFri": "Di–Fr",
+    "sat": "Samstag",
+    "closed": "geschlossen"
+  },
+  "Navigation": {
+    "home": "Home",
+    "specialties": "Spezialitäten",
+    "gifts": "Geschenkkörbe",
+    "catering": "Apéro-Catering",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "Home": {
+    "heroTitle": "Italienische Lebensart in Horgen",
+    "heroSubtitle": "Authentische Spezialitäten, individuelle Geschenkkörbe und Apéro-Catering für besondere Momente.",
+    "ctaGifts": "Geschenkkorb anfragen",
+    "ctaCatering": "Apéro-Catering anfragen",
+    "aboutTeaserTitle": "Benvenuti im salottino",
+    "aboutTeaserText": "Bei uns finden Sie ausgewählte italienische Köstlichkeiten, die wir direkt und mit viel Sorgfalt importieren. Erleben Sie den Geschmack Italiens – mitten in Horgen.",
+    "visitUsTitle": "Besuchen Sie uns",
+    "routeBtn": "Route öffnen"
+  },
+  "Specialties": {
+    "title": "Unsere Spezialitäten",
+    "subtitle": "Eine Auswahl unserer besten Produkte aus Italien.",
+    "categories": {
+      "antipasti": "Antipasti",
+      "pasta": "Pasta & Risotto",
+      "dolci": "Dolci & Süssigkeiten",
+      "olio": "Olivenöl & Balsamico",
+      "vino": "Wein & Prosecco",
+      "grappa": "Grappa",
+      "kaffee": "Kaffee",
+      "saefte": "Traubensäfte"
+    },
+    "ctaAvailability": "Verfügbarkeit anfragen"
+  },
+  "GiftBaskets": {
+    "title": "Geschenkkörbe für jeden Anlass",
+    "subtitle": "Ob für Kunden, Freunde oder Familie – wir stellen Ihnen den perfekten Korb zusammen.",
+    "individual": "Individuell & Persönlich",
+    "individualText": "Nennen Sie uns Ihr Budget und Ihre Vorlieben, wir kümmern uns um den Rest.",
+    "sizes": "Grössen-Beispiele",
+    "formTitle": "Geschenkkorb anfragen"
+  },
+  "Catering": {
+    "title": "Italienisches Apéro-Catering",
+    "subtitle": "Holen Sie sich das Dolce Vita an Ihren Event.",
+    "inStore": "Apéro im salottino",
+    "inStoreDesc": "Geniessen Sie unsere Spezialitäten in gemütlicher Atmosphäre direkt bei uns im Laden.",
+    "atHome": "Bei Ihnen vor Ort",
+    "atHomeDesc": "Wir liefern frisch zubereitete Platten und Getränke zu Ihrer Location in Horgen und Umgebung.",
+    "menus": "Menü-Vorschläge",
+    "menu1": "Piccolo Apéro",
+    "menu2": "Classico Italiano",
+    "menu3": "Grande Festa",
+    "formTitle": "Catering Offerte anfragen"
+  },
+  "Forms": {
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "budget": "Budget (CHF)",
+    "amount": "Anzahl Körbe",
+    "persons": "Anzahl Personen",
+    "location": "Ort der Veranstaltung",
+    "delivery": "Lieferoption",
+    "pickup": "Abholung im Laden",
+    "deliveryOption": "Lieferung (Horgen)",
+    "date": "Wunschdatum",
+    "message": "Nachricht / Wünsche",
+    "submit": "Anfrage absenden",
+    "sending": "Wird gesendet...",
+    "success": "Danke! Wir haben Ihre Anfrage erhalten.",
+    "error": "Es ist ein Fehler aufgetreten."
+  },
+  "About": {
+    "title": "Über uns",
+    "storyTitle": "Herzlich Willkommen",
+    "storyText1": "Im salottino offerieren wir Ihnen sorgfältig ausgesuchte und direkt importierte italienische Spezialitäten mit bestem Qualitätssiegel. Geschätzt werden auch die individuell zusammengestellten Geschenkkörbe für Private oder Geschäftskunden, sowie die von uns organisierten Apéro-Caterings.",
+    "storyText2": "Ich selber bin gebürtige Italienerin, verheiratet mit einem Schweizer und Mutter von zwei Jungs. Ursprünglich habe ich politische Wissenschaften und Public Relations an der Uni Mailand studiert und habe danach viele Jahre für eine italienische Hotelkette als Verkaufsleiterin gearbeitet. Ich freue mich Sie im salottino begrüssen zu dürfen, um Ihnen die Genüsslichkeiten aus meiner Heimat näherzubringen und Sie davon zu überzeugen.",
+    "signature": "A presto, Eva Vogel-Degli Esposti",
+    "valuesTitle": "Unsere Werte",
+    "value1Title": "Beste Qualität",
+    "value1Text": "Wir wählen unsere Produkte mit Sorgfalt aus und arbeiten nur mit vertrauenswürdigen italienischen Lieferanten zusammen.",
+    "value2Title": "Mit Liebe & Leidenschaft",
+    "value2Text": "Jedes Produkt erzählt eine Geschichte. Wir teilen unsere Leidenschaft für Italien gerne mit Ihnen.",
+    "value3Title": "Persönliche Beratung",
+    "value3Text": "Ob Geschenkkorb oder Catering – wir nehmen uns Zeit für Ihre individuellen Wünsche."
+  },
+  "Contact": {
+    "title": "Kontakt & Öffnungszeiten",
+    "emergency": "Bei «Notfällen» können Sie mich auch per Mobile erreichen",
+    "delivery": "Wir können innerhalb Horgen auch Hauslieferungen anbieten.",
+    "formTitle": "Schreiben Sie uns",
+    "subject": "Betreff"
+  },
+  "Footer": {
+    "rights": "© 2024 salottino GmbH. Alle Rechte vorbehalten.",
+    "design": "Design & Development"
+  },
+  "Impressum": {
+    "title": "Impressum",
+    "companyTitle": "Unternehmen",
+    "contactTitle": "Kontakt",
+    "phone": "Telefon",
+    "mobile": "Mobile",
+    "email": "E-Mail",
+    "ownerTitle": "Inhaberin",
+    "uidTitle": "UID-Nummer",
+    "uidNote": "Auf Anfrage erhältlich",
+    "disclaimerTitle": "Haftungsausschluss",
+    "disclaimerText": "Die Inhalte unserer Seiten wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen."
+  },
+  "Privacy": {
+    "title": "Datenschutzerklärung",
+    "responsibleTitle": "Verantwortliche Stelle",
+    "analyticsTitle": "Hinweise zur Datenverarbeitung im Zusammenhang mit Google Analytics",
+    "analyticsText1": "Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited. Wenn der Verantwortliche für die Datenverarbeitung auf dieser Website ausserhalb des Europäischen Wirtschaftsraumes oder der Schweiz sitzt, dann erfolgt die Google Analytics Datenverarbeitung durch Google LLC.",
+    "analyticsText2": "Google Analytics verwendet sog. «Cookies», Textdateien, die auf dem Computer des Seitenbesuchers gespeichert werden und die eine Analyse der Benutzung der Website durch den Seitenbesucher ermöglichen. Die durch das Cookie erzeugten Informationen über die Benutzung dieser Website durch den Seitenbesucher werden in der Regel an einen Server von Google übertragen und dort gespeichert.",
+    "analyticsText3": "Google Analytics wird ausschliesslich mit der Erweiterung «_anonymizeIp()» auf dieser Website verwendet. Diese Erweiterung stellt eine Anonymisierung der IP-Adresse durch Kürzung sicher und schliesst eine direkte Personenbeziehbarkeit aus.",
+    "analyticsText4": "Im Auftrag des Seitenbetreibers wird Google die anfallenden Informationen benutzen, um die Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen dem Seitenbetreiber gegenüber zu erbringen.",
+    "analyticsText5": "Die gesendeten und mit Cookies verknüpften Daten werden nach 50 Monaten automatisch gelöscht.",
+    "analyticsOptOut": "Die Erfassung durch Google Analytics kann verhindert werden. Das entsprechende Browser-Plugin kann unter dem folgenden Link heruntergeladen werden:",
+    "moreInfo": "Weitere Informationen zur Datennutzung durch Google finden Sie hier:",
+    "contactFormTitle": "Kontaktformular",
+    "contactFormText": "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.",
+    "rightsTitle": "Ihre Rechte",
+    "rightsText": "Sie haben jederzeit das Recht auf Auskunft über die bezüglich Ihrer Person gespeicherten Daten, deren Herkunft und Empfänger sowie den Zweck der Speicherung. Auskunft über die gespeicherten Daten erhalten Sie unter der oben genannten E-Mail-Adresse.",
+    "changesTitle": "Änderungen",
+    "changesText": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen."
+  }
+}
+

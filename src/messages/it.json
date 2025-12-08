@@ -1,0 +1,150 @@
+{
+  "Common": {
+    "brandName": "salottino",
+    "specialties": "Specialità",
+    "giftBaskets": "Cesti Regalo",
+    "catering": "Catering Aperitivo",
+    "about": "Chi siamo",
+    "contact": "Contatto",
+    "news": "Novità",
+    "imprint": "Impressum",
+    "privacy": "Privacy",
+    "openingHours": "Orari di apertura",
+    "address": "Indirizzo",
+    "phone": "Telefono",
+    "email": "E-Mail",
+    "mon": "Lunedì",
+    "tueFri": "Mar–Ven",
+    "sat": "Sabato",
+    "closed": "chiuso"
+  },
+  "Navigation": {
+    "home": "Home",
+    "specialties": "Specialità",
+    "gifts": "Cesti Regalo",
+    "catering": "Catering",
+    "about": "Chi siamo",
+    "contact": "Contatto"
+  },
+  "Home": {
+    "heroTitle": "Stile di vita italiano a Horgen",
+    "heroSubtitle": "Specialità autentiche, cesti regalo personalizzati e catering per aperitivi per momenti speciali.",
+    "ctaGifts": "Richiedi cesto regalo",
+    "ctaCatering": "Richiedi catering",
+    "aboutTeaserTitle": "Benvenuti da salottino",
+    "aboutTeaserText": "Da noi trovate prelibatezze italiane selezionate, importate direttamente e con grande cura. Scoprite il gusto dell'Italia – nel cuore di Horgen.",
+    "visitUsTitle": "Venite a trovarci",
+    "routeBtn": "Apri percorso"
+  },
+  "Specialties": {
+    "title": "Le Nostre Specialità",
+    "subtitle": "Una selezione dei nostri migliori prodotti dall'Italia.",
+    "categories": {
+      "antipasti": "Antipasti",
+      "pasta": "Pasta & Risotto",
+      "dolci": "Dolci & Dolciumi",
+      "olio": "Olio d'oliva & Balsamico",
+      "vino": "Vino & Prosecco",
+      "grappa": "Grappa",
+      "kaffee": "Caffè",
+      "saefte": "Succhi d'uva"
+    },
+    "ctaAvailability": "Richiedi disponibilità"
+  },
+  "GiftBaskets": {
+    "title": "Cesti Regalo per ogni occasione",
+    "subtitle": "Per clienti, amici o famiglia – componiamo il cesto perfetto per voi.",
+    "individual": "Individuale & Personale",
+    "individualText": "Diteci il vostro budget e le vostre preferenze, al resto pensiamo noi.",
+    "sizes": "Esempi di dimensioni",
+    "formTitle": "Richiedi cesto regalo"
+  },
+  "Catering": {
+    "title": "Catering Aperitivo Italiano",
+    "subtitle": "Portate la Dolce Vita al vostro evento.",
+    "inStore": "Aperitivo da salottino",
+    "inStoreDesc": "Gustate le nostre specialità in un'atmosfera accogliente direttamente nel nostro negozio.",
+    "atHome": "Da voi in loco",
+    "atHomeDesc": "Consegniamo piatti preparati al momento e bevande alla vostra location a Horgen e dintorni.",
+    "menus": "Proposte Menu",
+    "menu1": "Aperitivo Piccolo",
+    "menu2": "Classico Italiano",
+    "menu3": "Grande Festa",
+    "formTitle": "Richiedi offerta catering"
+  },
+  "Forms": {
+    "name": "Nome",
+    "email": "E-Mail",
+    "phone": "Telefono",
+    "budget": "Budget (CHF)",
+    "amount": "Quantità",
+    "persons": "Numero di persone",
+    "location": "Luogo dell'evento",
+    "delivery": "Opzione consegna",
+    "pickup": "Ritiro in negozio",
+    "deliveryOption": "Consegna (Horgen)",
+    "date": "Data desiderata",
+    "message": "Messaggio / Desideri",
+    "submit": "Invia richiesta",
+    "sending": "Invio in corso...",
+    "success": "Grazie! Abbiamo ricevuto la vostra richiesta.",
+    "error": "Si è verificato un errore."
+  },
+  "About": {
+    "title": "Chi siamo",
+    "storyTitle": "Benvenuti",
+    "storyText1": "Al salottino troverete tante specialità italiane di grande qualità. Siamo specializzati nella composizione di cesti personalizzati per tutti i vostri regali privati o aziendali. Abbiamo anche diverse offerte per aperitivi e feste.",
+    "storyText2": "Milanese, sposata con uno svizzero e mamma di due bimbi, ho studiato Scienze Politiche e PR e ho lavorato per anni nel turismo. Non vedo l'ora di darvi il benvenuto nel mio salottino.",
+    "signature": "A presto, Eva Vogel-Degli Esposti",
+    "valuesTitle": "I nostri valori",
+    "value1Title": "Migliore Qualità",
+    "value1Text": "Selezioniamo i nostri prodotti con cura e lavoriamo solo con fornitori italiani di fiducia.",
+    "value2Title": "Con Amore & Passione",
+    "value2Text": "Ogni prodotto racconta una storia. Condividiamo volentieri la nostra passione per l'Italia con voi.",
+    "value3Title": "Consulenza Personale",
+    "value3Text": "Che si tratti di un cesto regalo o di catering – ci prendiamo tempo per i vostri desideri individuali."
+  },
+  "Contact": {
+    "title": "Contatto & Orari",
+    "emergency": "In caso di emergenza potete raggiungermi anche via cellulare",
+    "delivery": "Offriamo consegna a domicilio a Horgen.",
+    "formTitle": "Scriveteci",
+    "subject": "Oggetto"
+  },
+  "Footer": {
+    "rights": "© 2024 salottino GmbH. Tutti i diritti riservati.",
+    "design": "Design & Sviluppo"
+  },
+  "Impressum": {
+    "title": "Impressum",
+    "companyTitle": "Azienda",
+    "contactTitle": "Contatto",
+    "phone": "Telefono",
+    "mobile": "Cellulare",
+    "email": "E-Mail",
+    "ownerTitle": "Titolare",
+    "uidTitle": "Numero UID",
+    "uidNote": "Disponibile su richiesta",
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerText": "I contenuti delle nostre pagine sono stati creati con la massima cura. Tuttavia, non possiamo garantire la correttezza, la completezza e l'attualità dei contenuti."
+  },
+  "Privacy": {
+    "title": "Informativa sulla Privacy",
+    "responsibleTitle": "Responsabile",
+    "analyticsTitle": "Informazioni sull'elaborazione dei dati in relazione a Google Analytics",
+    "analyticsText1": "Questo sito web utilizza Google Analytics, un servizio di analisi web di Google Ireland Limited. Se il responsabile del trattamento dei dati su questo sito web si trova al di fuori dello Spazio economico europeo o della Svizzera, il trattamento dei dati di Google Analytics viene effettuato da Google LLC.",
+    "analyticsText2": "Google Analytics utilizza i cosiddetti «cookie», file di testo che vengono memorizzati sul computer del visitatore del sito e che consentono un'analisi dell'utilizzo del sito web da parte del visitatore.",
+    "analyticsText3": "Google Analytics viene utilizzato esclusivamente con l'estensione «_anonymizeIp()» su questo sito web. Questa estensione garantisce l'anonimizzazione dell'indirizzo IP mediante troncamento.",
+    "analyticsText4": "Per conto del gestore del sito, Google utilizzerà queste informazioni per valutare l'utilizzo del sito web, per compilare report sulle attività del sito e per fornire altri servizi relativi all'utilizzo del sito web e di Internet.",
+    "analyticsText5": "I dati inviati e collegati ai cookie vengono automaticamente cancellati dopo 50 mesi.",
+    "analyticsOptOut": "La raccolta da parte di Google Analytics può essere impedita. Il plugin del browser corrispondente può essere scaricato al seguente link:",
+    "moreInfo": "Ulteriori informazioni sull'utilizzo dei dati da parte di Google sono disponibili qui:",
+    "contactFormTitle": "Modulo di contatto",
+    "contactFormText": "Se ci inviate richieste tramite il modulo di contatto, i vostri dati dal modulo di richiesta, compresi i dati di contatto che avete fornito, saranno memorizzati da noi ai fini dell'elaborazione della richiesta e in caso di domande di follow-up.",
+    "rightsTitle": "I vostri diritti",
+    "rightsText": "Avete il diritto in qualsiasi momento di ottenere informazioni sui dati memorizzati che vi riguardano, sulla loro origine e sui destinatari, nonché sullo scopo della memorizzazione. Per informazioni sui dati memorizzati, contattate l'indirizzo e-mail sopra indicato.",
+    "changesTitle": "Modifiche",
+    "changesText": "Ci riserviamo il diritto di adattare la presente informativa sulla privacy in modo che corrisponda sempre ai requisiti legali attuali o per implementare modifiche ai nostri servizi."
+  }
+}
+
