@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,72 +7,46 @@
 @layer base {
   :root {
     /* Warm Background - Creamy White */
-    --background: 35 30% 98%;
-    --foreground: 25 20% 20%;
+    --background: 40 33% 96%;
+    --foreground: 20 14% 15%;
 
-    /* Card Background - White */
-    --card: 0 0% 100%;
-    --card-foreground: 25 20% 20%;
+    /* Card Background */
+    --card: 40 40% 98%;
+    --card-foreground: 20 14% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 25 20% 20%;
+    --popover: 40 40% 98%;
+    --popover-foreground: 20 14% 15%;
 
-    /* Primary: Warm Brown (Espresso/Leather) */
-    --primary: 25 35% 35%;
-    --primary-foreground: 35 30% 98%;
+    /* Primary: Rich Espresso Brown */
+    --primary: 24 38% 28%;
+    --primary-foreground: 40 33% 96%;
 
-    /* Secondary: Softer Beige/Sand */
-    --secondary: 35 25% 90%;
-    --secondary-foreground: 25 35% 35%;
+    /* Secondary: Warm Sand */
+    --secondary: 38 35% 88%;
+    --secondary-foreground: 24 38% 28%;
 
     /* Muted */
-    --muted: 35 20% 94%;
-    --muted-foreground: 25 10% 50%;
+    --muted: 38 25% 92%;
+    --muted-foreground: 20 10% 45%;
 
-    /* Accent: Turquoise / Teal */
-    --accent: 175 45% 42%;
+    /* Accent: Deep Terracotta */
+    --accent: 15 55% 50%;
     --accent-foreground: 0 0% 100%;
 
     /* Destructive */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 15% 85%;
-    --input: 35 15% 85%;
-    --ring: 25 35% 35%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 24 38% 28%;
 
     --radius: 0.5rem;
-  }
-
-  .dark {
-    /* Dark Mode (Fallback) */
-    --background: 25 20% 12%;
-    --foreground: 35 30% 90%;
-
-    --card: 25 20% 14%;
-    --card-foreground: 35 30% 90%;
-
-    --popover: 25 20% 14%;
-    --popover-foreground: 35 30% 90%;
-
-    --primary: 35 30% 70%;
-    --primary-foreground: 25 20% 12%;
-
-    --secondary: 25 20% 18%;
-    --secondary-foreground: 35 30% 90%;
-
-    --muted: 25 20% 18%;
-    --muted-foreground: 35 10% 65%;
-
-    --accent: 175 45% 42%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 25 20% 18%;
-    --input: 25 20% 18%;
-    --ring: 35 30% 70%;
+    
+    /* Custom Colors */
+    --olive: 82 35% 35%;
+    --wine: 350 45% 35%;
+    --gold: 42 85% 55%;
   }
 }
 
@@ -78,11 +54,129 @@
   * {
     @apply border-border;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
   }
+  
   h1, h2, h3, h4, h5, h6 {
-    @apply font-medium tracking-tight;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    @apply font-semibold tracking-tight;
   }
 }
 
+@layer components {
+  /* Elegant display text */
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  
+  /* Handwriting style accent */
+  .font-accent {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+  }
+  
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  }
+  
+  /* Decorative line */
+  .decorative-line {
+    @apply h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent;
+  }
+  
+  /* Image with overlay hover */
+  .image-hover-zoom {
+    @apply overflow-hidden;
+  }
+  .image-hover-zoom img {
+    @apply transition-transform duration-700 ease-out;
+  }
+  .image-hover-zoom:hover img {
+    @apply scale-110;
+  }
+  
+  /* Marquee animation */
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+  
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+  
+  /* Fade up animation */
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+  
+  /* Stagger children */
+  .stagger-children > * {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+  .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+  
+  /* Noise texture overlay */
+  .noise-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  
+  /* Elegant button */
+  .btn-elegant {
+    @apply relative overflow-hidden px-8 py-4 font-display text-lg tracking-wide;
+    @apply border-2 border-current transition-all duration-300;
+  }
+  .btn-elegant::before {
+    content: '';
+    @apply absolute inset-0 -translate-x-full bg-current transition-transform duration-300;
+  }
+  .btn-elegant:hover::before {
+    @apply translate-x-0;
+  }
+  .btn-elegant span {
+    @apply relative z-10 mix-blend-difference;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}

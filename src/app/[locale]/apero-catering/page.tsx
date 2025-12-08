@@ -14,7 +14,7 @@ export default async function CateringPage({ params }: { params: Promise<{ local
   const t = await getTranslations({locale, namespace: 'Catering'});
 
   return (
-    <div className="container px-4 py-12 space-y-16">
+    <div className="container px-4 pt-28 pb-16 space-y-16">
       
       {/* Hero Image */}
       <div className="relative h-[300px] rounded-2xl overflow-hidden">

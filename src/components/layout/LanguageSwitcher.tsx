@@ -2,22 +2,24 @@
 
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
-import { Button } from '@/components/ui/button';
 import { startTransition } from 'react';
+import { cn } from '@/lib/utils';
 
-export default function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  isLight?: boolean;
+}
+
+export default function LanguageSwitcher({ isLight = false }: LanguageSwitcherProps) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
 
   const switchLocale = (newLocale: string) => {
-    // Basic replacement for now. For robust path handling, use next-intl/navigation
-    // Assuming pathname starts with /de or /it or is just /
     const segments = pathname.split('/');
     if (segments[1] === 'de' || segments[1] === 'it') {
-        segments[1] = newLocale;
+      segments[1] = newLocale;
     } else {
-        segments.splice(1, 0, newLocale);
+      segments.splice(1, 0, newLocale);
     }
     const newPath = segments.join('/');
     
@@ -27,25 +29,30 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex items-center space-x-2">
-      <Button 
-        variant={locale === 'de' ? 'default' : 'ghost'} 
-        size="sm" 
+    <div className="flex items-center gap-1">
+      <button 
         onClick={() => switchLocale('de')}
-        className="w-10 px-0"
+        className={cn(
+          "px-2 py-1 font-display text-sm tracking-wide transition-colors",
+          locale === 'de' 
+            ? isLight ? "text-white" : "text-primary"
+            : isLight ? "text-white/50 hover:text-white" : "text-muted-foreground hover:text-primary"
+        )}
       >
         DE
-      </Button>
-      <span className="text-muted-foreground">|</span>
-      <Button 
-        variant={locale === 'it' ? 'default' : 'ghost'} 
-        size="sm" 
+      </button>
+      <span className={isLight ? "text-white/30" : "text-border"}>|</span>
+      <button 
         onClick={() => switchLocale('it')}
-        className="w-10 px-0"
+        className={cn(
+          "px-2 py-1 font-display text-sm tracking-wide transition-colors",
+          locale === 'it' 
+            ? isLight ? "text-white" : "text-primary"
+            : isLight ? "text-white/50 hover:text-white" : "text-muted-foreground hover:text-primary"
+        )}
       >
         IT
-      </Button>
+      </button>
     </div>
   );
 }
-

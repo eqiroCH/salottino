@@ -15,7 +15,7 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
   const subtitle = locale === 'de' ? 'Neuigkeiten und Events rund um salottino.' : 'Notizie ed eventi su salottino.';
 
   return (
-    <div className="container px-4 py-12 space-y-12">
+    <div className="container px-4 pt-28 pb-16 space-y-12">
       <div className="text-center max-w-2xl mx-auto space-y-4">
         <h1 className="text-4xl font-bold text-primary">{title}</h1>
         <p className="text-lg text-muted-foreground">{subtitle}</p>

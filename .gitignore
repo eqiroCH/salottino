@@ -38,3 +38,6 @@ next-env.d.ts
 # Testing
 coverage
 
+
+# Local Netlify folder
+.netlify

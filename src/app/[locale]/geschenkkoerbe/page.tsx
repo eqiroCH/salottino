@@ -12,7 +12,7 @@ export default async function GiftBasketsPage({ params }: { params: Promise<{ lo
   const t = await getTranslations({locale, namespace: 'GiftBaskets'});
 
   return (
-    <div className="container px-4 py-12 space-y-16">
+    <div className="container px-4 pt-28 pb-16 space-y-16">
       
       {/* Intro */}
       <div className="text-center max-w-3xl mx-auto space-y-6">

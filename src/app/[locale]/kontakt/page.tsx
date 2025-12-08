@@ -12,7 +12,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const tCommon = await getTranslations({locale, namespace: 'Common'});
 
   return (
-    <div className="container px-4 py-12 space-y-12">
+    <div className="container px-4 pt-28 pb-16 space-y-12">
       
       <div className="text-center max-w-2xl mx-auto space-y-4">
         <h1 className="text-4xl font-bold text-primary">{t('title')}</h1>

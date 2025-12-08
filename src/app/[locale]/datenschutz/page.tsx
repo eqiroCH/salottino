@@ -9,7 +9,7 @@ export default async function DatenschutzPage({ params }: { params: Promise<{ lo
   const t = await getTranslations({locale, namespace: 'Privacy'});
 
   return (
-    <div className="container px-4 py-12 max-w-3xl mx-auto">
+    <div className="container px-4 pt-28 pb-16 max-w-3xl mx-auto">
       <h1 className="text-4xl font-bold text-primary mb-8">{t('title')}</h1>
       
       <div className="prose prose-lg max-w-none space-y-8 text-muted-foreground">

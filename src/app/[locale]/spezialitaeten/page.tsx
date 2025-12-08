@@ -15,7 +15,7 @@ export default async function SpecialtiesPage({ params }: { params: Promise<{ lo
   const t = await getTranslations({locale, namespace: 'Specialties'});
 
   return (
-    <div className="container px-4 py-12 space-y-12">
+    <div className="container px-4 pt-28 pb-16 space-y-12">
       <div className="text-center space-y-4 max-w-2xl mx-auto">
         <h1 className="text-4xl font-bold tracking-tight text-primary">{t('title')}</h1>
         <p className="text-lg text-muted-foreground">{t('subtitle')}</p>

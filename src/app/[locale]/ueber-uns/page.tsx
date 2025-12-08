@@ -12,7 +12,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const t = await getTranslations({locale, namespace: 'About'});
 
   return (
-    <div className="container px-4 py-12 space-y-16">
+    <div className="container px-4 pt-28 pb-16 space-y-16">
       
       {/* Hero / Intro */}
       <div className="flex flex-col md:flex-row items-center gap-12">
