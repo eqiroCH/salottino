@@ -1,252 +1,201 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, MapPin, Clock, Phone } from 'lucide-react';
+import { ArrowRight, MapPin, Clock, Phone, Mail } from 'lucide-react';
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({locale, namespace: 'Home'});
   const tCommon = await getTranslations({locale, namespace: 'Common'});
 
-  const products = [
-    'Antipasti', 'Pasta', 'Olivenöl', 'Prosecco', 'Grappa', 'Dolci', 'Risotto', 
-    'Parmigiano', 'Prosciutto', 'Taralli', 'Cantuccini', 'Limoncello'
-  ];
-
   return (
     <div className="flex flex-col">
       
-      {/* ═══════════════════════════════════════════════════════════════════════
-          HERO SECTION - Full screen, dramatic
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+      {/* ══════════════════════════════════════════════════════════════════
+          HERO - Clean, full-screen with subtle animation
+      ══════════════════════════════════════════════════════════════════ */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background */}
         <div className="absolute inset-0">
           <Image 
             src="/images/hero/homepage-2.jpg" 
-            alt="Italienische Spezialitäten" 
+            alt="" 
             fill 
-            className="object-cover"
+            className="object-cover scale-105"
             priority
           />
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
-          {/* Warm color tint */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-amber-900/30 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         
         {/* Content */}
-        <div className="relative z-10 container px-6 py-20 text-center text-white stagger-children">
-          {/* Tagline */}
-          <p className="font-accent text-xl md:text-2xl text-white/80 mb-4">
-            Italienische Spezialitäten in Horgen
+        <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+          <p className="fade-in-up text-sm tracking-[0.3em] uppercase text-white/70 mb-6">
+            Italienische Spezialitäten
           </p>
           
-          {/* Main Heading - Large & Dramatic */}
-          <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold tracking-tight mb-6 leading-[0.9]">
-            <span className="block">Sapori</span>
-            <span className="block font-accent text-[0.7em] text-white/90">d&apos;Italia</span>
+          <h1 className="fade-in-up delay-1 font-display text-5xl md:text-7xl lg:text-8xl font-medium mb-6">
+            salottino
           </h1>
           
-          {/* Subtitle */}
-          <p className="max-w-xl mx-auto text-lg md:text-xl text-white/80 mb-10 leading-relaxed">
+          <p className="fade-in-up delay-2 text-lg md:text-xl text-white/80 max-w-xl mx-auto mb-10 leading-relaxed">
             {t('heroSubtitle')}
           </p>
           
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="fade-in-up delay-3 flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href={`/${locale}/geschenkkoerbe`}
-              className="group inline-flex items-center gap-3 bg-white text-primary px-8 py-4 font-display text-lg tracking-wide hover:bg-white/90 transition-colors"
+              className="group inline-flex items-center gap-2 bg-white text-primary px-8 py-4 text-sm tracking-wide hover:bg-white/90 transition-all duration-300"
             >
               {t('ctaGifts')}
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
               href={`/${locale}/apero-catering`}
-              className="inline-flex items-center gap-3 border-2 border-white/50 text-white px-8 py-4 font-display text-lg tracking-wide hover:bg-white/10 backdrop-blur-sm transition-colors"
+              className="inline-flex items-center gap-2 border border-white/40 text-white px-8 py-4 text-sm tracking-wide hover:bg-white/10 transition-all duration-300"
             >
               {t('ctaCatering')}
             </Link>
           </div>
         </div>
         
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 animate-bounce">
-          <div className="w-6 h-10 border-2 border-current rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-2 bg-current rounded-full animate-pulse" />
-          </div>
+        {/* Scroll hint */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/50 to-white/20 animate-pulse" />
         </div>
       </section>
 
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          PRODUCT MARQUEE - Endless scroll of products
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-6 bg-primary text-primary-foreground overflow-hidden">
-        <div className="animate-marquee flex whitespace-nowrap">
-          {[...products, ...products].map((product, i) => (
-            <span key={i} className="mx-8 font-display text-xl md:text-2xl flex items-center gap-4">
-              {product}
-              <span className="text-accent opacity-60">✦</span>
-            </span>
-          ))}
+      {/* ══════════════════════════════════════════════════════════════════
+          INTRO - Simple text section
+      ══════════════════════════════════════════════════════════════════ */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container px-6 max-w-3xl mx-auto text-center">
+          <h2 className="font-display text-3xl md:text-4xl text-primary mb-6 leading-snug">
+            {t('aboutTeaserTitle')}
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            {t('aboutTeaserText')}
+          </p>
         </div>
       </section>
 
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          THREE PILLARS - Asymmetric layout
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 md:py-32 bg-background relative noise-overlay">
+      {/* ══════════════════════════════════════════════════════════════════
+          OFFERINGS - Three clean cards
+      ══════════════════════════════════════════════════════════════════ */}
+      <section className="py-24 md:py-32 bg-secondary/30">
         <div className="container px-6">
-          {/* Section Header */}
-          <div className="max-w-2xl mb-16 md:mb-24">
-            <p className="font-accent text-accent text-lg mb-2">Was wir bieten</p>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary mb-4">
-              Drei Wege zum<br />
-              <span className="font-accent">italienischen Genuss</span>
-            </h2>
-          </div>
-
-          {/* Grid with asymmetric cards */}
-          <div className="grid md:grid-cols-12 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             
-            {/* Spezialitäten - Large card */}
-            <Link 
-              href={`/${locale}/spezialitaeten`} 
-              className="md:col-span-7 group relative aspect-[4/3] md:aspect-[16/10] overflow-hidden bg-primary/5"
-            >
-              <Image 
-                src="/images/wein/wein-1.jpg" 
-                alt="Italienische Spezialitäten" 
-                fill 
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-                <p className="font-accent text-white/70 text-lg mb-2">Entdecken</p>
-                <h3 className="font-display text-3xl md:text-4xl text-white mb-3">
-                  {tCommon('specialties')}
-                </h3>
-                <p className="text-white/70 max-w-md mb-4">
-                  Antipasti, handgemachte Pasta, edle Weine und süsse Verführungen – direkt aus Italien.
-                </p>
-                <span className="inline-flex items-center gap-2 text-white font-medium group-hover:gap-4 transition-all">
-                  Sortiment entdecken <ArrowRight className="w-4 h-4" />
-                </span>
-              </div>
-            </Link>
-            
-            {/* Right column - two stacked cards */}
-            <div className="md:col-span-5 flex flex-col gap-6 md:gap-8">
-              
-              {/* Geschenkkörbe */}
-              <Link 
-                href={`/${locale}/geschenkkoerbe`} 
-                className="group relative aspect-[4/3] md:aspect-auto md:flex-1 overflow-hidden bg-secondary"
-              >
+            {/* Card 1 - Spezialitäten */}
+            <Link href={`/${locale}/spezialitaeten`} className="group hover-lift">
+              <div className="img-zoom aspect-[4/5] relative mb-6">
                 <Image 
-                  src="/images/geschenkkoerbe/geschenkkorb-1.jpg" 
-                  alt="Geschenkkörbe" 
-                  fill 
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="font-accent text-white/70 mb-1">Verschenken</p>
-                  <h3 className="font-display text-2xl md:text-3xl text-white mb-2">
-                    {tCommon('giftBaskets')}
-                  </h3>
-                  <span className="inline-flex items-center gap-2 text-white/80 text-sm group-hover:gap-3 transition-all">
-                    Individuell zusammenstellen <ArrowRight className="w-4 h-4" />
-                  </span>
-                </div>
-              </Link>
-              
-              {/* Catering */}
-              <Link 
-                href={`/${locale}/apero-catering`} 
-                className="group relative aspect-[4/3] md:aspect-auto md:flex-1 overflow-hidden bg-muted"
-              >
-                <Image 
-                  src="/images/catering/catering-1.jpg" 
-                  alt="Apéro Catering" 
-                  fill 
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="font-accent text-white/70 mb-1">Feiern</p>
-                  <h3 className="font-display text-2xl md:text-3xl text-white mb-2">
-                    {tCommon('catering')}
-                  </h3>
-                  <span className="inline-flex items-center gap-2 text-white/80 text-sm group-hover:gap-3 transition-all">
-                    Event planen <ArrowRight className="w-4 h-4" />
-                  </span>
-                </div>
-              </Link>
-              
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* ═══════════════════════════════════════════════════════════════════════
-          ABOUT / PERSONAL SECTION
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 md:py-32 bg-secondary/30 relative overflow-hidden">
-        {/* Decorative element */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent" />
-        
-        <div className="container px-6 relative">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            
-            {/* Image */}
-            <div className="relative">
-              <div className="aspect-[4/5] relative overflow-hidden">
-                <Image 
-                  src="/images/hero/homepage-1.jpg" 
-                  alt="Eva Vogel - Inhaberin salottino" 
+                  src="/images/wein/wein-1.jpg" 
+                  alt="Spezialitäten" 
                   fill 
                   className="object-cover"
                 />
               </div>
-              {/* Decorative frame */}
-              <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/20 -z-10" />
-              {/* Floating quote */}
-              <div className="absolute -bottom-8 -left-8 md:-left-12 bg-white p-6 shadow-xl max-w-xs">
-                <p className="font-accent text-lg text-primary italic">
-                  &ldquo;La dolce vita – das süsse Leben teilen wir gerne mit Ihnen.&rdquo;
-                </p>
+              <h3 className="font-display text-2xl text-primary mb-2 group-hover:text-accent transition-colors">
+                {tCommon('specialties')}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Antipasti, Pasta, Weine, Dolci und mehr – direkt aus Italien.
+              </p>
+              <span className="link-underline inline-flex items-center gap-2 text-sm text-primary">
+                Entdecken <ArrowRight className="w-4 h-4" />
+              </span>
+            </Link>
+
+            {/* Card 2 - Geschenkkörbe */}
+            <Link href={`/${locale}/geschenkkoerbe`} className="group hover-lift">
+              <div className="img-zoom aspect-[4/5] relative mb-6">
+                <Image 
+                  src="/images/geschenkkoerbe/geschenkkorb-1.jpg" 
+                  alt="Geschenkkörbe" 
+                  fill 
+                  className="object-cover"
+                />
               </div>
+              <h3 className="font-display text-2xl text-primary mb-2 group-hover:text-accent transition-colors">
+                {tCommon('giftBaskets')}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Individuell zusammengestellt für jeden Anlass und jedes Budget.
+              </p>
+              <span className="link-underline inline-flex items-center gap-2 text-sm text-primary">
+                Konfigurieren <ArrowRight className="w-4 h-4" />
+              </span>
+            </Link>
+
+            {/* Card 3 - Catering */}
+            <Link href={`/${locale}/apero-catering`} className="group hover-lift">
+              <div className="img-zoom aspect-[4/5] relative mb-6">
+                <Image 
+                  src="/images/catering/catering-1.jpg" 
+                  alt="Apéro Catering" 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="font-display text-2xl text-primary mb-2 group-hover:text-accent transition-colors">
+                {tCommon('catering')}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Italienisches Fingerfood und Getränke für Ihren Event.
+              </p>
+              <span className="link-underline inline-flex items-center gap-2 text-sm text-primary">
+                Anfragen <ArrowRight className="w-4 h-4" />
+              </span>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
+
+      {/* ══════════════════════════════════════════════════════════════════
+          ABOUT - Image + Text side by side
+      ══════════════════════════════════════════════════════════════════ */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            {/* Image */}
+            <div className="img-zoom aspect-[4/5] lg:aspect-square relative">
+              <Image 
+                src="/images/hero/homepage-1.jpg" 
+                alt="Eva Vogel" 
+                fill 
+                className="object-cover"
+              />
             </div>
             
             {/* Text */}
-            <div className="lg:pl-8">
-              <p className="font-accent text-accent text-lg mb-2">{t('aboutTeaserTitle')}</p>
-              <h2 className="font-display text-4xl md:text-5xl text-primary mb-6">
-                Mit Leidenschaft<br />
-                <span className="font-accent">importiert</span>
+            <div>
+              <p className="text-sm tracking-[0.2em] uppercase text-accent mb-4">
+                Über uns
+              </p>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-primary mb-6 leading-tight">
+                Mit Liebe<br />aus Italien
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
                 <p>
-                  {t('aboutTeaserText')}
+                  Als gebürtige Mailänderin bringe ich die Aromen meiner Heimat nach Horgen. 
+                  Jedes Produkt wird sorgfältig ausgewählt und direkt von kleinen 
+                  Familienbetrieben importiert.
                 </p>
-                <p>
-                  Als gebürtige Mailänderin bringe ich die Aromen meiner Heimat nach Horgen – 
-                  von handverlesenen Antipasti bis hin zu edlen Weinen aus kleinen Familienbetrieben.
+                <p className="font-display text-primary italic text-lg">
+                  «La dolce vita – das süsse Leben teilen wir gerne mit Ihnen.»
                 </p>
               </div>
               
               <Link 
                 href={`/${locale}/ueber-uns`}
-                className="inline-flex items-center gap-3 text-primary font-display text-lg group"
+                className="link-underline inline-flex items-center gap-2 text-primary"
               >
-                Mehr über uns
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                Mehr erfahren <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
             
@@ -255,11 +204,11 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          GALLERY STRIP - Product impressions
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-4 bg-primary/5">
-        <div className="flex gap-4 overflow-hidden">
+      {/* ══════════════════════════════════════════════════════════════════
+          GALLERY - Horizontal scroll
+      ══════════════════════════════════════════════════════════════════ */}
+      <section className="py-16 bg-primary/5 overflow-hidden">
+        <div className="marquee flex gap-4">
           {[
             '/images/antipasti/antipasti-1.jpg',
             '/images/wein/wein-2.jpg',
@@ -267,13 +216,19 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             '/images/geschenkkoerbe/geschenkkorb-2.jpg',
             '/images/antipasti/antipasti-2.jpg',
             '/images/wein/wein-3.jpg',
+            '/images/antipasti/antipasti-1.jpg',
+            '/images/wein/wein-2.jpg',
+            '/images/catering/catering-2.jpg',
+            '/images/geschenkkoerbe/geschenkkorb-2.jpg',
+            '/images/antipasti/antipasti-2.jpg',
+            '/images/wein/wein-3.jpg',
           ].map((src, i) => (
-            <div key={i} className="relative w-48 md:w-64 aspect-square flex-shrink-0 overflow-hidden">
+            <div key={i} className="relative w-64 md:w-80 aspect-[4/3] flex-shrink-0">
               <Image 
                 src={src} 
-                alt={`Impression ${i + 1}`} 
+                alt="" 
                 fill 
-                className="object-cover hover:scale-110 transition-transform duration-500"
+                className="object-cover"
               />
             </div>
           ))}
@@ -281,126 +236,114 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          VISIT US - Location & Hours with style
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="py-24 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 border border-white/20 rounded-full -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] border border-white/20 rounded-full translate-x-1/3 translate-y-1/3" />
-        </div>
-        
-        <div className="container px-6 relative">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* ══════════════════════════════════════════════════════════════════
+          CONTACT - Clean info section
+      ══════════════════════════════════════════════════════════════════ */}
+      <section className="py-24 md:py-32 bg-primary text-primary-foreground">
+        <div className="container px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
             
-            {/* Text content */}
+            {/* Left - Title & CTA */}
             <div>
-              <p className="font-accent text-white/60 text-lg mb-2">Besuchen Sie uns</p>
-              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl mb-8">
+              <p className="text-sm tracking-[0.2em] uppercase text-white/50 mb-4">
                 {t('visitUsTitle')}
+              </p>
+              <h2 className="font-display text-4xl md:text-5xl mb-8">
+                Besuchen<br />Sie uns
               </h2>
               
-              <div className="space-y-6 mb-10">
-                {/* Address */}
-                <div className="flex gap-4">
-                  <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold text-lg">salottino GmbH</p>
-                    <p className="text-white/70">Seestrasse 159</p>
-                    <p className="text-white/70">8810 Horgen</p>
-                  </div>
+              <Link 
+                href={`/${locale}/kontakt`}
+                className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 text-sm tracking-wide hover:bg-white/90 transition-all duration-300"
+              >
+                Kontakt aufnehmen <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            
+            {/* Right - Info */}
+            <div className="grid sm:grid-cols-2 gap-8">
+              
+              <div>
+                <div className="flex items-center gap-2 text-accent mb-3">
+                  <MapPin className="w-4 h-4" />
+                  <span className="text-xs tracking-[0.15em] uppercase">Adresse</span>
                 </div>
-                
-                {/* Hours */}
-                <div className="flex gap-4">
-                  <Clock className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold text-lg mb-2">{tCommon('openingHours')}</p>
-                    <div className="grid grid-cols-2 gap-x-8 gap-y-1 text-white/70">
-                      <span>{tCommon('mon')}</span>
-                      <span>{tCommon('closed')}</span>
-                      <span>{tCommon('tueFri')}</span>
-                      <span>10–12 & 15–18 Uhr</span>
-                      <span>{tCommon('sat')}</span>
-                      <span>10–15 Uhr</span>
-                    </div>
-                  </div>
+                <p className="text-white/80 leading-relaxed">
+                  salottino GmbH<br />
+                  Seestrasse 159<br />
+                  8810 Horgen
+                </p>
+                <a 
+                  href="https://maps.google.com/?q=Seestrasse+159,+8810+Horgen"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-underline inline-block mt-3 text-sm text-white/60 hover:text-white"
+                >
+                  {t('routeBtn')}
+                </a>
+              </div>
+              
+              <div>
+                <div className="flex items-center gap-2 text-accent mb-3">
+                  <Clock className="w-4 h-4" />
+                  <span className="text-xs tracking-[0.15em] uppercase">{tCommon('openingHours')}</span>
                 </div>
-                
-                {/* Phone */}
-                <div className="flex gap-4">
-                  <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold text-lg">Telefon</p>
-                    <a href="tel:+41446832022" className="text-white/70 hover:text-white transition-colors">
-                      +41 44 683 20 22
-                    </a>
-                  </div>
+                <div className="text-white/80 space-y-1 text-sm">
+                  <p>{tCommon('mon')}: {tCommon('closed')}</p>
+                  <p>{tCommon('tueFri')}: 10–12 & 15–18</p>
+                  <p>{tCommon('sat')}: 10–15</p>
                 </div>
               </div>
               
-              <a 
-                href="https://maps.google.com/?q=Seestrasse+159,+8810+Horgen" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-white text-primary px-8 py-4 font-display text-lg hover:bg-white/90 transition-colors"
-              >
-                {t('routeBtn')}
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </div>
-            
-            {/* Map */}
-            <div className="relative">
-              <div className="aspect-square md:aspect-[4/3] rounded-lg overflow-hidden bg-white/10">
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  frameBorder="0" 
-                  scrolling="no"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=8.5950,47.2550,8.6050,47.2650&amp;layer=mapnik&amp;marker=47.2600,8.6000" 
-                  className="w-full h-full"
-                  title="Standort salottino"
-                />
+              <div>
+                <div className="flex items-center gap-2 text-accent mb-3">
+                  <Phone className="w-4 h-4" />
+                  <span className="text-xs tracking-[0.15em] uppercase">Telefon</span>
+                </div>
+                <a href="tel:+41446832022" className="text-white/80 hover:text-white transition-colors">
+                  +41 44 683 20 22
+                </a>
               </div>
-              {/* Label */}
-              <div className="absolute top-4 left-4 bg-accent text-white px-4 py-2 font-display">
-                Horgen am Zürichsee
+              
+              <div>
+                <div className="flex items-center gap-2 text-accent mb-3">
+                  <Mail className="w-4 h-4" />
+                  <span className="text-xs tracking-[0.15em] uppercase">E-Mail</span>
+                </div>
+                <a href="mailto:eva.vogel@salottino.ch" className="text-white/80 hover:text-white transition-colors">
+                  eva.vogel@salottino.ch
+                </a>
               </div>
+              
             </div>
-            
           </div>
         </div>
       </section>
 
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          FINAL CTA
-      ═══════════════════════════════════════════════════════════════════════ */}
+      {/* ══════════════════════════════════════════════════════════════════
+          FINAL CTA - Minimal
+      ══════════════════════════════════════════════════════════════════ */}
       <section className="py-24 md:py-32 bg-background text-center">
-        <div className="container px-6 max-w-3xl">
-          <p className="font-accent text-accent text-lg mb-4">Lust auf Italien?</p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary mb-6">
-            Wir freuen uns<br />
-            <span className="font-accent">auf Sie</span>
+        <div className="container px-6 max-w-2xl mx-auto">
+          <h2 className="font-display text-3xl md:text-4xl text-primary mb-6">
+            Lust auf Italien?
           </h2>
-          <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
-            Ob Geschenkkorb, Catering oder einfach nur zum Stöbern – 
-            kommen Sie vorbei oder kontaktieren Sie uns.
+          <p className="text-muted-foreground mb-10">
+            Entdecken Sie unser Sortiment oder kontaktieren Sie uns für eine persönliche Beratung.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href={`/${locale}/kontakt`}
-              className="inline-flex items-center justify-center gap-3 bg-primary text-white px-8 py-4 font-display text-lg hover:bg-primary/90 transition-colors"
-            >
-              Kontakt aufnehmen
-            </Link>
-            <Link 
               href={`/${locale}/spezialitaeten`}
-              className="inline-flex items-center justify-center gap-3 border-2 border-primary text-primary px-8 py-4 font-display text-lg hover:bg-primary/5 transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 text-sm tracking-wide hover:bg-primary/90 transition-all duration-300"
             >
               Sortiment entdecken
+            </Link>
+            <Link 
+              href={`/${locale}/kontakt`}
+              className="inline-flex items-center justify-center gap-2 border border-primary text-primary px-8 py-4 text-sm tracking-wide hover:bg-primary/5 transition-all duration-300"
+            >
+              Kontakt
             </Link>
           </div>
         </div>

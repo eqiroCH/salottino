@@ -42,8 +42,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li className="flex justify-between max-w-[200px]">
                 <span>{t('mon')}</span>
-                <span>{t('closed')}</span>
-              </li>
+               </li>
               <li className="flex justify-between max-w-[200px]">
                 <span>{t('tueFri')}</span>
                 <span>10:00–12:00 | 15:00–18:00</span>
