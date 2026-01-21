@@ -52,7 +52,7 @@ export default async function CateringPage({ params }: { params: Promise<{ local
                 href="#catering-form"
                 className="inline-flex items-center gap-2 border-2 border-white text-white bg-transparent px-8 py-4 text-base font-medium tracking-wide hover:bg-white/10 transition-all duration-300 shrink-0"
               >
-                Catering anfragen
+                {t('ctaButton')}
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>

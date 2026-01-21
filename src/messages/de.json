@@ -60,6 +60,7 @@
   "Catering": {
     "title": "Italienisches Apéro-Catering",
     "subtitle": "Holen Sie sich das Dolce Vita an Ihren Event.",
+    "ctaButton": "Catering anfragen",
     "inStore": "Apéro im Salottino",
     "inStoreDesc": "Geniessen Sie unsere Spezialitäten in gemütlicher Atmosphäre direkt bei uns im Laden.",
     "atHome": "Bei Ihnen vor Ort",
@@ -107,7 +108,8 @@
     "emergency": "Bei «Notfällen» können Sie mich auch per Mobile erreichen",
     "delivery": "Wir können innerhalb Horgen auch Hauslieferungen anbieten.",
     "formTitle": "Schreiben Sie uns",
-    "subject": "Betreff"
+    "subject": "Betreff",
+    "viewLargerMap": "Größere Karte ansehen"
   },
   "Footer": {
     "rights": "© 2024 Salottino GmbH. Alle Rechte vorbehalten.",

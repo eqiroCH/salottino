@@ -60,6 +60,7 @@
   "Catering": {
     "title": "Catering Aperitivo Italiano",
     "subtitle": "Portate la Dolce Vita al vostro evento.",
+    "ctaButton": "Richiedi catering",
     "inStore": "Aperitivo da Salottino",
     "inStoreDesc": "Gustate le nostre specialità in un'atmosfera accogliente direttamente nel nostro negozio.",
     "atHome": "Da voi in loco",
@@ -107,7 +108,8 @@
     "emergency": "In caso di emergenza potete raggiungermi anche via cellulare",
     "delivery": "Offriamo consegna a domicilio a Horgen.",
     "formTitle": "Scriveteci",
-    "subject": "Oggetto"
+    "subject": "Oggetto",
+    "viewLargerMap": "Visualizza mappa più grande"
   },
   "Footer": {
     "rights": "© 2024 Salottino GmbH. Tutti i diritti riservati.",

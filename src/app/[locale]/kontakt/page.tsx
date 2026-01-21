@@ -76,7 +76,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                           />
                           <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent/8 opacity-50 group-hover:opacity-30 transition-opacity duration-300 pointer-events-none" />
                           <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-md text-xs font-medium text-primary shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Größere Karte ansehen →
+                            {t('viewLargerMap')} →
                           </div>
                         </div>
                       </a>
