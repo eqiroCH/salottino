@@ -38,16 +38,14 @@
   },
   "Specialties": {
     "title": "Unsere Spezialitäten",
-    "subtitle": "Eine Auswahl unserer besten Produkte aus Italien.",
+    "subtitle": "Eine Auswahl unserer besten Produkte aus Italien – sorgfältig ausgewählt und direkt importiert.",
     "categories": {
-      "antipasti": "Antipasti",
-      "pasta": "Pasta & Risotto",
-      "dolci": "Dolci & Süssigkeiten",
-      "olio": "Olivenöl & Balsamico",
+      "olio": "Olivenöl",
+      "pasta": "Pasta",
       "vino": "Wein & Prosecco",
-      "grappa": "Grappa",
-      "kaffee": "Kaffee",
-      "saefte": "Traubensäfte"
+      "dolci": "Dolci",
+      "antipasti": "Antipasti & Saucen",
+      "riso": "Reis"
     },
     "ctaAvailability": "Verfügbarkeit anfragen"
   },
@@ -93,8 +91,8 @@
   "About": {
     "title": "Über uns",
     "storyTitle": "Herzlich Willkommen",
-    "storyText1": "Im Salottino offerieren wir Ihnen sorgfältig ausgesuchte und direkt importierte italienische Spezialitäten mit bestem Qualitätssiegel. Geschätzt werden auch die individuell zusammengestellten Geschenkkörbe für Private oder Geschäftskunden, sowie die von uns organisierten Apéro-Caterings.",
-    "storyText2": "Ich selber bin gebürtige Italienerin, verheiratet mit einem Schweizer und Mutter von zwei Jungs. Ursprünglich habe ich politische Wissenschaften und Public Relations an der Uni Mailand studiert und habe danach viele Jahre für eine italienische Hotelkette als Verkaufsleiterin gearbeitet. Ich freue mich Sie im Salottino begrüssen zu dürfen, um Ihnen die Genüsslichkeiten aus meiner Heimat näherzubringen und Sie davon zu überzeugen.",
+    "storyText1": "Im Salottino finden Sie handverlesene italienische Spezialitäten, direkt importiert und mit höchstem Qualitätsanspruch ausgewählt. Dazu individuelle Geschenkkörbe und Apéro-Catering für Ihre besonderen Anlässe.",
+    "storyText2": "Als gebürtige Mailänderin bringe ich Ihnen die Genüsse meiner Heimat nach Horgen. Ich freue mich auf Ihren Besuch.",
     "signature": "A presto, Eva Vogel-Degli Esposti",
     "valuesTitle": "Unsere Werte",
     "value1Title": "Beste Qualität",

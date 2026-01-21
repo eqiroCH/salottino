@@ -110,7 +110,7 @@ export default async function LocaleLayout({
       ? 'Italienische Feinkost, Geschenkkörbe und Apéro-Catering in Horgen'
       : 'Specialità italiane, cesti regalo e catering per aperitivi a Horgen',
     url: `https://salottino.ch/${locale}`,
-    logo: 'https://salottino.ch/images/logo/salottino-logo.png',
+    logo: 'https://salottino.ch/images/logo/salottino-logo1.png',
     image: 'https://salottino.ch/images/hero/homepage-2.jpg',
     address: {
       '@type': 'PostalAddress',

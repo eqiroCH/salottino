@@ -38,16 +38,14 @@
   },
   "Specialties": {
     "title": "Le Nostre Specialità",
-    "subtitle": "Una selezione dei nostri migliori prodotti dall'Italia.",
+    "subtitle": "Una selezione dei nostri migliori prodotti dall'Italia – selezionati con cura e importati direttamente.",
     "categories": {
-      "antipasti": "Antipasti",
-      "pasta": "Pasta & Risotto",
-      "dolci": "Dolci & Dolciumi",
-      "olio": "Olio d'oliva & Balsamico",
+      "olio": "Olio d'oliva",
+      "pasta": "Pasta",
       "vino": "Vino & Prosecco",
-      "grappa": "Grappa",
-      "kaffee": "Caffè",
-      "saefte": "Succhi d'uva"
+      "dolci": "Dolci",
+      "antipasti": "Antipasti & Sughi",
+      "riso": "Riso"
     },
     "ctaAvailability": "Richiedi disponibilità"
   },
@@ -93,8 +91,8 @@
   "About": {
     "title": "Chi siamo",
     "storyTitle": "Benvenuti",
-    "storyText1": "Al Salottino troverete tante specialità italiane di grande qualità. Siamo specializzati nella composizione di cesti personalizzati per tutti i vostri regali privati o aziendali. Abbiamo anche diverse offerte per aperitivi e feste.",
-    "storyText2": "Milanese, sposata con uno svizzero e mamma di due bimbi, ho studiato Scienze Politiche e PR e ho lavorato per anni nel turismo. Non vedo l'ora di darvi il benvenuto nel mio Salottino.",
+    "storyText1": "Al Salottino trovate specialità italiane selezionate con cura, importate direttamente e di altissima qualità. Inoltre cesti regalo personalizzati e catering per i vostri eventi speciali.",
+    "storyText2": "Milanese di nascita, vi porto i sapori della mia terra a Horgen. Vi aspetto con piacere.",
     "signature": "A presto, Eva Vogel-Degli Esposti",
     "valuesTitle": "I nostri valori",
     "value1Title": "Migliore Qualità",

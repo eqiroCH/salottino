@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,37 +6,45 @@
 
 @layer base {
   :root {
-    --background: 30 20% 98%;
-    --foreground: 30 10% 12%;
+    /* Salottino Brand Colors - Exakt vom Logo */
+    /* Logo Braun: #552E0B | Logo Türkis: #0EB4D5 | Cremiges Weiss: #FAF8F5 */
+    
+    --background: 36 33% 97%;
+    --foreground: 27 79% 19%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 30 10% 12%;
+    --card: 36 33% 98%;
+    --card-foreground: 27 79% 19%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 30 10% 12%;
+    --popover-foreground: 27 79% 19%;
 
-    /* Intensivere Farben - mehr Kontrast */
-    --primary: 28 35% 22%;
-    --primary-foreground: 30 20% 98%;
+    /* Salottino Braun - exakt vom Logo #552E0B */
+    --primary: 27 79% 19%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 15% 92%;
-    --secondary-foreground: 28 35% 22%;
+    /* Cremiges Beige */
+    --secondary: 35 30% 94%;
+    --secondary-foreground: 27 79% 19%;
 
-    --muted: 30 10% 95%;
-    --muted-foreground: 30 10% 40%;
+    --muted: 35 20% 92%;
+    --muted-foreground: 27 50% 35%;
 
-    /* Intensiveres Terracotta */
-    --accent: 18 65% 48%;
+    /* Salottino Türkis - exakt vom Logo #0EB4D5 */
+    --accent: 189 87% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 88%;
-    --input: 30 15% 88%;
-    --ring: 28 35% 22%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 27 79% 19%;
 
-    --radius: 0.5rem;
+    /* Gold/Kupfer für besondere Akzente */
+    --gold: 38 70% 50%;
+    --gold-muted: 38 40% 70%;
+
+    --radius: 0.25rem;
   }
 }
 
@@ -51,30 +59,60 @@
   
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'DM Sans', system-ui, sans-serif;
-    line-height: 1.6;
+    font-family: 'Jost', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', Georgia, serif;
-    @apply font-medium;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    @apply font-semibold;
     line-height: 1.2;
+    letter-spacing: -0.01em;
   }
 }
 
 @layer components {
   .font-display {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
   }
   
   .font-sans {
-    font-family: 'DM Sans', system-ui, sans-serif;
+    font-family: 'Jost', system-ui, sans-serif;
+  }
+  
+  /* Elegant gradient backgrounds - Salottino Braun #552E0B */
+  .bg-elegant-dark {
+    background: linear-gradient(135deg, hsl(27 79% 19%) 0%, hsl(27 79% 15%) 100%);
+  }
+  
+  .bg-elegant-warm {
+    background: linear-gradient(180deg, hsl(35 30% 97%) 0%, hsl(35 25% 94%) 100%);
+  }
+  
+  .bg-cream {
+    background-color: #FAF8F5;
   }
 
-  /* Smooth fade in on scroll */
+  /* Subtle decorative line under headings - Salottino Türkis #0EB4D5 */
+  .heading-accent {
+    @apply relative pb-4;
+  }
+  .heading-accent::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-16 h-0.5;
+    background: linear-gradient(90deg, hsl(189 87% 45%) 0%, transparent 100%);
+  }
+  .heading-accent-center::after {
+    @apply left-1/2 -translate-x-1/2;
+    background: linear-gradient(90deg, transparent 0%, hsl(189 87% 45%) 50%, transparent 100%);
+  }
+
+  /* Smooth fade in animations */
   .fade-in-up {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
     animation: fadeInUp 0.8s ease forwards;
   }
   
@@ -97,10 +135,11 @@
     @apply transition-all duration-500 ease-out;
   }
   .hover-lift:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -15px rgba(0,0,0,0.1);
   }
   
-  /* Image reveal on hover */
+  /* Image zoom on hover */
   .img-zoom {
     @apply overflow-hidden;
   }
@@ -111,38 +150,16 @@
     transform: scale(1.05);
   }
   
-  /* Underline animation */
-  .link-underline {
+  /* Elegant underline animation */
+  .link-elegant {
     @apply relative;
   }
-  .link-underline::after {
+  .link-elegant::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-px bg-current transition-all duration-300;
+    @apply absolute bottom-0 left-0 w-0 h-px bg-accent transition-all duration-300;
   }
-  .link-underline:hover::after {
+  .link-elegant:hover::after {
     @apply w-full;
-  }
-  
-  /* Smooth line reveal */
-  .line-reveal {
-    @apply relative overflow-hidden;
-  }
-  .line-reveal::before {
-    content: '';
-    @apply absolute inset-0 bg-primary transform translate-x-full;
-    animation: lineReveal 0.8s ease forwards;
-  }
-  @keyframes lineReveal {
-    to { transform: translateX(-100%); }
-  }
-  
-  /* Parallax-like subtle movement */
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  .float {
-    animation: float 6s ease-in-out infinite;
   }
   
   /* Smooth marquee */
@@ -151,30 +168,66 @@
     100% { transform: translateX(-50%); }
   }
   .marquee {
-    animation: scroll 25s linear infinite;
+    animation: scroll 30s linear infinite;
   }
   .marquee:hover {
     animation-play-state: paused;
   }
+
+  /* Elegant card style */
+  .card-elegant {
+    @apply bg-white border border-border/50 transition-all duration-500;
+  }
+  .card-elegant:hover {
+    @apply border-accent/30 shadow-lg;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.08);
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 text-sm font-medium tracking-wide transition-all duration-300;
+  }
+  .btn-primary:hover {
+    @apply bg-primary/90;
+  }
+  
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 bg-accent text-white px-7 py-3.5 text-sm font-medium tracking-wide transition-all duration-300;
+  }
+  .btn-accent:hover {
+    @apply bg-accent/90;
+  }
+  
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-7 py-3.5 text-sm font-medium tracking-wide transition-all duration-300;
+  }
+  .btn-outline:hover {
+    @apply bg-primary text-primary-foreground;
+  }
 }
 
-/* Custom selection */
+/* Custom selection - Salottino Türkis #0EB4D5 */
 ::selection {
-  background: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
+  background: hsl(189 87% 45%);
+  color: white;
 }
 
-/* Smooth scrollbar */
+/* Elegant scrollbar - Salottino Braun #552E0B */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #FAF8F5;
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted-foreground) / 0.3);
-  border-radius: 3px;
+  background: hsl(27 79% 19% / 0.3);
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground) / 0.5);
+  background: hsl(27 79% 19% / 0.5);
+}
+
+/* Subtle pattern overlay */
+.pattern-subtle {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
