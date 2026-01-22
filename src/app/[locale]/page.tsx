@@ -96,7 +96,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             
             {/* Card 1 - Spezialitäten */}
             <Link href={`/${locale}/spezialitaeten`} className="group">
-              <div className="card-elegant hover-lift overflow-hidden h-full">
+              <div className="card-elegant hover-lift overflow-hidden h-full flex flex-col">
                 <div className="aspect-[3/4] relative img-zoom">
                   <Image 
                     src="/images/wein/wein-1.jpg" 
@@ -105,23 +105,24 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                     className="object-cover"
                   />
                 </div>
-                <div className="p-3 md:p-8">
-                  <h3 className="font-display text-sm md:text-2xl text-primary mb-2 md:mb-3 group-hover:text-accent transition-colors duration-300">
+                <div className="p-3 md:p-8 flex flex-col flex-1">
+                  <h3 className="font-display text-sm md:text-2xl text-primary mb-2 md:mb-3 group-hover:text-accent transition-colors duration-300 break-words">
                     {tCommon('specialties')}
                   </h3>
-                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed mb-3 md:mb-5 hidden md:block">
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed mb-3 md:mb-5 hidden md:block flex-1">
                     Olivenöl, Pasta, Weine, Prosecco, Dolci und mehr – direkt aus Italien.
                   </p>
-                  <span className="inline-flex items-center gap-1 md:gap-2 text-xs md:text-sm text-accent font-medium">
-                    Entdecken <ArrowRight className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                  <div className="flex items-center gap-1 md:gap-2 text-xs md:text-sm text-accent font-medium mt-auto">
+                    <span>Entdecken</span>
+                    <ArrowRight className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform shrink-0" />
+                  </div>
                 </div>
               </div>
             </Link>
 
             {/* Card 2 - Geschenkkörbe */}
             <Link href={`/${locale}/geschenkkoerbe`} className="group">
-              <div className="card-elegant hover-lift overflow-hidden h-full">
+              <div className="card-elegant hover-lift overflow-hidden h-full flex flex-col">
                 <div className="aspect-[3/4] relative img-zoom">
                   <Image 
                     src="/images/geschenkkoerbe/geschenkkorb-1.jpg" 
@@ -133,23 +134,24 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                     Ab CHF 40
                   </div>
                 </div>
-                <div className="p-3 md:p-8">
-                  <h3 className="font-display text-sm md:text-2xl text-primary mb-2 md:mb-3 group-hover:text-accent transition-colors duration-300">
+                <div className="p-3 md:p-8 flex flex-col flex-1">
+                  <h3 className="font-display text-sm md:text-2xl text-primary mb-2 md:mb-3 group-hover:text-accent transition-colors duration-300 break-words">
                     {tCommon('giftBaskets')}
                   </h3>
-                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed mb-3 md:mb-5 hidden md:block">
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed mb-3 md:mb-5 hidden md:block flex-1">
                     Individuell zusammengestellt für jeden Anlass und jedes Budget.
                   </p>
-                  <span className="inline-flex items-center gap-1 md:gap-2 text-xs md:text-sm text-accent font-medium">
-                    Konfigurieren <ArrowRight className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                  <div className="flex items-center gap-1 md:gap-2 text-xs md:text-sm text-accent font-medium mt-auto">
+                    <span>Konfigurieren</span>
+                    <ArrowRight className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform shrink-0" />
+                  </div>
                 </div>
               </div>
             </Link>
 
             {/* Card 3 - Catering */}
             <Link href={`/${locale}/apero-catering`} className="group">
-              <div className="card-elegant hover-lift overflow-hidden h-full">
+              <div className="card-elegant hover-lift overflow-hidden h-full flex flex-col">
                 <div className="aspect-[3/4] relative img-zoom">
                   <Image 
                     src="/images/catering/catering-1.jpg" 
@@ -158,16 +160,17 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                     className="object-cover"
                   />
                 </div>
-                <div className="p-3 md:p-8">
-                  <h3 className="font-display text-sm md:text-2xl text-primary mb-2 md:mb-3 group-hover:text-accent transition-colors duration-300">
+                <div className="p-3 md:p-8 flex flex-col flex-1">
+                  <h3 className="font-display text-sm md:text-2xl text-primary mb-2 md:mb-3 group-hover:text-accent transition-colors duration-300 break-words">
                     {tCommon('catering')}
                   </h3>
-                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed mb-3 md:mb-5 hidden md:block">
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed mb-3 md:mb-5 hidden md:block flex-1">
                     Italienisches Fingerfood und Getränke für Ihren Event.
                   </p>
-                  <span className="inline-flex items-center gap-1 md:gap-2 text-xs md:text-sm text-accent font-medium">
-                    Anfragen <ArrowRight className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                  <div className="flex items-center gap-1 md:gap-2 text-xs md:text-sm text-accent font-medium mt-auto">
+                    <span>Anfragen</span>
+                    <ArrowRight className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform shrink-0" />
+                  </div>
                 </div>
               </div>
             </Link>
