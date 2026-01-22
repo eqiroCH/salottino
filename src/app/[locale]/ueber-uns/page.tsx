@@ -85,33 +85,33 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6 md:gap-10 mt-8 md:mt-12 max-w-5xl mx-auto">
+          <div className="grid grid-cols-3 gap-2 md:gap-10 mt-8 md:mt-12 max-w-5xl mx-auto">
             
             {/* Value 1 */}
-            <div className="card-elegant p-6 md:p-10 text-center">
-              <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-secondary flex items-center justify-center mb-4 md:mb-6">
-                <Star className="w-5 h-5 md:w-7 md:h-7 text-accent" />
+            <div className="card-elegant p-3 md:p-10 text-center">
+              <div className="mx-auto w-8 h-8 md:w-16 md:h-16 bg-secondary flex items-center justify-center mb-2 md:mb-6">
+                <Star className="w-4 h-4 md:w-7 md:h-7 text-accent" />
               </div>
-              <h3 className="font-display text-lg md:text-xl text-primary mb-3 md:mb-4">{t('value1Title')}</h3>
-              <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">{t('value1Text')}</p>
+              <h3 className="font-display text-xs md:text-xl text-primary mb-2 md:mb-4">{t('value1Title')}</h3>
+              <p className="text-muted-foreground text-[10px] md:text-sm leading-relaxed hidden md:block">{t('value1Text')}</p>
             </div>
             
             {/* Value 2 */}
-            <div className="card-elegant p-6 md:p-10 text-center">
-              <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-secondary flex items-center justify-center mb-4 md:mb-6">
-                <Heart className="w-5 h-5 md:w-7 md:h-7 text-accent" />
+            <div className="card-elegant p-3 md:p-10 text-center">
+              <div className="mx-auto w-8 h-8 md:w-16 md:h-16 bg-secondary flex items-center justify-center mb-2 md:mb-6">
+                <Heart className="w-4 h-4 md:w-7 md:h-7 text-accent" />
               </div>
-              <h3 className="font-display text-lg md:text-xl text-primary mb-3 md:mb-4">{t('value2Title')}</h3>
-              <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">{t('value2Text')}</p>
+              <h3 className="font-display text-xs md:text-xl text-primary mb-2 md:mb-4">{t('value2Title')}</h3>
+              <p className="text-muted-foreground text-[10px] md:text-sm leading-relaxed hidden md:block">{t('value2Text')}</p>
             </div>
             
             {/* Value 3 */}
-            <div className="card-elegant p-6 md:p-10 text-center">
-              <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-secondary flex items-center justify-center mb-4 md:mb-6">
-                <Users className="w-5 h-5 md:w-7 md:h-7 text-accent" />
+            <div className="card-elegant p-3 md:p-10 text-center">
+              <div className="mx-auto w-8 h-8 md:w-16 md:h-16 bg-secondary flex items-center justify-center mb-2 md:mb-6">
+                <Users className="w-4 h-4 md:w-7 md:h-7 text-accent" />
               </div>
-              <h3 className="font-display text-lg md:text-xl text-primary mb-3 md:mb-4">{t('value3Title')}</h3>
-              <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">{t('value3Text')}</p>
+              <h3 className="font-display text-xs md:text-xl text-primary mb-2 md:mb-4">{t('value3Title')}</h3>
+              <p className="text-muted-foreground text-[10px] md:text-sm leading-relaxed hidden md:block">{t('value3Text')}</p>
             </div>
             
           </div>

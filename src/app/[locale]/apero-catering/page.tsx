@@ -67,24 +67,24 @@ export default async function CateringPage({ params }: { params: Promise<{ local
       {/* Options */}
       <section className="py-12 md:py-16 bg-cream">
         <div className="container px-6">
-          <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-10 max-w-4xl mx-auto">
             
             {/* Option 1 */}
-            <div className="card-elegant p-10">
-              <div className="w-14 h-14 bg-secondary flex items-center justify-center mb-6">
-                <Store className="w-6 h-6 text-accent" />
+            <div className="card-elegant p-4 md:p-10">
+              <div className="w-10 h-10 md:w-14 md:h-14 bg-secondary flex items-center justify-center mb-4 md:mb-6">
+                <Store className="w-5 h-5 md:w-6 md:h-6 text-accent" />
               </div>
-              <h3 className="font-display text-2xl text-primary mb-4">{t('inStore')}</h3>
-              <p className="text-muted-foreground leading-relaxed">{t('inStoreDesc')}</p>
+              <h3 className="font-display text-base md:text-2xl text-primary mb-2 md:mb-4">{t('inStore')}</h3>
+              <p className="text-muted-foreground leading-relaxed text-xs md:text-base">{t('inStoreDesc')}</p>
             </div>
             
             {/* Option 2 */}
-            <div className="card-elegant p-10">
-              <div className="w-14 h-14 bg-secondary flex items-center justify-center mb-6">
-                <Truck className="w-6 h-6 text-accent" />
+            <div className="card-elegant p-4 md:p-10">
+              <div className="w-10 h-10 md:w-14 md:h-14 bg-secondary flex items-center justify-center mb-4 md:mb-6">
+                <Truck className="w-5 h-5 md:w-6 md:h-6 text-accent" />
               </div>
-              <h3 className="font-display text-2xl text-primary mb-4">{t('atHome')}</h3>
-              <p className="text-muted-foreground leading-relaxed">{t('atHomeDesc')}</p>
+              <h3 className="font-display text-base md:text-2xl text-primary mb-2 md:mb-4">{t('atHome')}</h3>
+              <p className="text-muted-foreground leading-relaxed text-xs md:text-base">{t('atHomeDesc')}</p>
             </div>
             
           </div>
@@ -174,19 +174,19 @@ export default async function CateringPage({ params }: { params: Promise<{ local
       </section>
 
       {/* Form Section */}
-      <section id="catering-form" className="py-12 md:py-16 bg-cream">
-        <div className="container px-6">
+      <section id="catering-form" className="py-8 md:py-16 bg-cream">
+        <div className="container px-4 md:px-6">
           <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-8">
-              <p className="text-accent text-sm font-medium tracking-[0.2em] uppercase mb-4">Jetzt anfragen</p>
-              <h2 className="font-display text-3xl md:text-4xl text-primary heading-accent heading-accent-center">
+            <div className="text-center mb-6 md:mb-8">
+              <p className="text-accent text-xs md:text-sm font-medium tracking-[0.2em] uppercase mb-3 md:mb-4">Jetzt anfragen</p>
+              <h2 className="font-display text-2xl md:text-4xl text-primary heading-accent heading-accent-center">
                 {t('formTitle')}
               </h2>
-              <p className="text-muted-foreground mt-6">
+              <p className="text-muted-foreground mt-4 md:mt-6 text-sm md:text-base">
                 Teilen Sie uns Ihre Wünsche mit – wir erstellen Ihnen gerne eine individuelle Offerte.
               </p>
             </div>
-            <div className="bg-white p-8 md:p-10 border border-border/50">
+            <div className="bg-white p-3 md:p-10 border border-border/50">
               <CateringForm />
             </div>
           </div>
