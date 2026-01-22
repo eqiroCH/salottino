@@ -36,12 +36,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
       {/* Story Section */}
       <section className="py-12 md:py-16 bg-white">
-        <div className="container px-6">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="container px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 lg:gap-24 items-center">
             
             {/* Image */}
             <div className="relative order-2 lg:order-1">
-              <div className="aspect-[4/5] relative overflow-hidden">
+              <div className="aspect-[3/4] md:aspect-[4/5] relative overflow-hidden">
                 <Image 
                   src="/images/hero/image.png" 
                   alt="Eva Vogel - Inhaberin Salottino" 
@@ -50,22 +50,22 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 />
               </div>
               {/* Decorative accent */}
-              <div className="absolute -bottom-6 -left-6 w-48 h-48 border border-accent/20 -z-10" />
+              <div className="hidden md:block absolute -bottom-6 -left-6 w-48 h-48 border border-accent/20 -z-10" />
             </div>
             
             {/* Text */}
             <div className="order-1 lg:order-2">
-              <h2 className="font-display text-3xl md:text-4xl text-primary mb-8 heading-accent">
+              <h2 className="font-display text-2xl md:text-4xl text-primary mb-4 md:mb-8 heading-accent">
                 {t('storyTitle')}
               </h2>
               
-              <div className="space-y-5 text-muted-foreground leading-relaxed mt-10">
+              <div className="space-y-4 md:space-y-5 text-muted-foreground leading-relaxed mt-6 md:mt-10 text-sm md:text-base">
                 <p>{t('storyText1')}</p>
                 <p>{t('storyText2')}</p>
               </div>
               
-              <div className="mt-10 p-6 bg-secondary/50 border-l-2 border-accent">
-                <p className="font-display text-xl text-primary italic">
+              <div className="mt-6 md:mt-10 p-4 md:p-6 bg-secondary/50 border-l-2 border-accent">
+                <p className="font-display text-lg md:text-xl text-primary italic">
                   {t('signature')}
                 </p>
               </div>
@@ -85,33 +85,33 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-10 mt-12 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-10 mt-8 md:mt-12 max-w-5xl mx-auto">
             
             {/* Value 1 */}
-            <div className="card-elegant p-10 text-center">
-              <div className="mx-auto w-16 h-16 bg-secondary flex items-center justify-center mb-6">
-                <Star className="w-7 h-7 text-accent" />
+            <div className="card-elegant p-6 md:p-10 text-center">
+              <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-secondary flex items-center justify-center mb-4 md:mb-6">
+                <Star className="w-5 h-5 md:w-7 md:h-7 text-accent" />
               </div>
-              <h3 className="font-display text-xl text-primary mb-4">{t('value1Title')}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{t('value1Text')}</p>
+              <h3 className="font-display text-lg md:text-xl text-primary mb-3 md:mb-4">{t('value1Title')}</h3>
+              <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">{t('value1Text')}</p>
             </div>
             
             {/* Value 2 */}
-            <div className="card-elegant p-10 text-center">
-              <div className="mx-auto w-16 h-16 bg-secondary flex items-center justify-center mb-6">
-                <Heart className="w-7 h-7 text-accent" />
+            <div className="card-elegant p-6 md:p-10 text-center">
+              <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-secondary flex items-center justify-center mb-4 md:mb-6">
+                <Heart className="w-5 h-5 md:w-7 md:h-7 text-accent" />
               </div>
-              <h3 className="font-display text-xl text-primary mb-4">{t('value2Title')}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{t('value2Text')}</p>
+              <h3 className="font-display text-lg md:text-xl text-primary mb-3 md:mb-4">{t('value2Title')}</h3>
+              <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">{t('value2Text')}</p>
             </div>
             
             {/* Value 3 */}
-            <div className="card-elegant p-10 text-center">
-              <div className="mx-auto w-16 h-16 bg-secondary flex items-center justify-center mb-6">
-                <Users className="w-7 h-7 text-accent" />
+            <div className="card-elegant p-6 md:p-10 text-center">
+              <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-secondary flex items-center justify-center mb-4 md:mb-6">
+                <Users className="w-5 h-5 md:w-7 md:h-7 text-accent" />
               </div>
-              <h3 className="font-display text-xl text-primary mb-4">{t('value3Title')}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{t('value3Text')}</p>
+              <h3 className="font-display text-lg md:text-xl text-primary mb-3 md:mb-4">{t('value3Title')}</h3>
+              <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">{t('value3Text')}</p>
             </div>
             
           </div>

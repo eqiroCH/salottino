@@ -194,7 +194,7 @@ export const giftBasketOptions = [
     id: 'piccolo',
     name: 'Piccolo',
     size: 'S',
-    priceRange: 'ab CHF 40',
+    priceRange: 'CHF 40',
     description: {
       de: 'Ideal als kleine Aufmerksamkeit',
       it: 'Ideale come piccolo pensiero'
@@ -203,13 +203,13 @@ export const giftBasketOptions = [
       de: 'z.B. Pasta, Sugo, Olivenöl',
       it: 'es. Pasta, sugo, olio d\'oliva'
     },
-    image: '/images/geschenkkoerbe/geschenkkorb-2.jpg'
+    image: '/images/geschenkkoerbe/geschenkkorb-1.jpg'
   },
   {
     id: 'medio',
     name: 'Medio',
     size: 'M',
-    priceRange: 'ab CHF 80',
+    priceRange: 'CHF 80',
     description: {
       de: 'Der Klassiker für Freunde & Familie',
       it: 'Il classico per amici e famiglia'
@@ -218,13 +218,13 @@ export const giftBasketOptions = [
       de: 'z.B. Wein, Risotto, Antipasti, Dolci',
       it: 'es. Vino, risotto, antipasti, dolci'
     },
-    image: '/images/geschenkkoerbe/geschenkkorb-3.jpg'
+    image: '/images/geschenkkoerbe/geschenkkorb-2.jpg'
   },
   {
     id: 'grande',
     name: 'Grande',
     size: 'L',
-    priceRange: 'ab CHF 100',
+    priceRange: 'CHF 95',
     description: {
       de: 'Für den grossen Genuss oder Geschäftspartner',
       it: 'Per grandi occasioni o partner commerciali'
@@ -233,6 +233,21 @@ export const giftBasketOptions = [
       de: 'z.B. Prosecco, Franciacorta, grosse Antipasti-Auswahl, Spezialitäten',
       it: 'es. Prosecco, Franciacorta, grande selezione di antipasti, specialità'
     },
-    image: '/images/geschenkkoerbe/geschenkkorb-1.jpg'
+    image: '/images/geschenkkoerbe/geschenkkorb-3.jpg'
+  },
+  {
+    id: 'tasche',
+    name: 'Deluxe Tasche',
+    size: 'S',
+    priceRange: 'CHF 40-80',
+    description: {
+      de: 'Elegante Variante ohne Karton, nur mit Tasche',
+      it: 'Variante elegante senza cartone, solo con borsa'
+    },
+    examples: {
+      de: 'z.B. Pasta, Sugo, Olivenöl',
+      it: 'es. Pasta, sugo, olio d\'oliva'
+    },
+    image: '/images/geschenkkoerbe/geschenkkorb-4.jpg'
   }
 ];

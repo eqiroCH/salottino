@@ -83,7 +83,7 @@ export default function Footer() {
             {/* Social Media */}
             <div className="flex items-center gap-4 mt-6">
               <a 
-                href="https://www.instagram.com/evasalottino/" 
+                href="https://www.instagram.com/salottinohorgen/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white/50 hover:text-accent transition-colors"
